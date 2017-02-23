@@ -1,0 +1,11 @@
+label.checkbox-label > input{ /* HIDE CHECKBOX */
+  visibility: hidden; /* Makes input not-clickable */
+  position: absolute; /* Remove input from document flow */
+}
+label.checkbox-label > input + img{ /* IMAGE STYLES */
+  cursor:pointer;
+  border:5px solid transparent;
+}
+label.checkbox-label > input:checked + img{ /* (BOX CHECKED) IMAGE STYLES */
+  border:5px solid #f00;
+}
