@@ -2,11 +2,16 @@
     // starting the session
     session_start();
 
+<<<<<<< HEAD
     // analytics tracking
     include_once("analyticstracking.php");
 
     // connect to the database
     $db = mysqli_connect("db0.stevens.edu","w3_visdec","J9r1CbDR","w3_visdec"); 
+=======
+    // connect to the database
+    $db = mysqli_connect("127.0.0.1","rogueone","Pehseses1","faces"); 
+>>>>>>> origin/master
 
     if (mysqli_connect_errno()) {
     echo printf("Connect failed: %s\n", mysqli_connect_error());
@@ -42,10 +47,13 @@
     $_SESSION['SurprisedSeven'] = $img7;
     $_SESSION['SurprisedEight'] = $img8;
 
+<<<<<<< HEAD
     $t = microtime(true);
     $micro = sprintf("%06d",($t - floor($t)) * 1000000);
     $d = new DateTime( date('Y-m-d H:i:s.'.$micro, $t) );
 
+=======
+>>>>>>> origin/master
     if (isset($_POST['Submit'])) { 
     $_SESSION['ScaredOneTagged'] = $_POST['ScaredOneTagged'];
     $_SESSION['ScaredTwoTagged'] = $_POST['ScaredTwoTagged'];
@@ -55,7 +63,10 @@
     $_SESSION['ScaredSixTagged'] = $_POST['ScaredSixTagged'];
     $_SESSION['ScaredSevenTagged'] = $_POST['ScaredSevenTagged'];
     $_SESSION['ScaredEightTagged'] = $_POST['ScaredEightTagged'];
+<<<<<<< HEAD
     $_SESSION['tsSubmitScared'] = $d->format("Y-m-d H:i:s.u");
+=======
+>>>>>>> origin/master
     } 
 ?> 
 
@@ -66,10 +77,15 @@
 <title>FACES</title>
 <link rel="stylesheet" href="style.css">
 </head>
+<<<<<<< HEAD
 <br>
 <body>
 <h1>Which of these faces look 'Surprised'?</h1>
 <br>
+=======
+<body>
+	<h1>Which of these faces look 'Surprised'?</h1>
+>>>>>>> origin/master
 <form action="8.php" method="post">
     <label class="checkbox-label">
         <input type="hidden" name="SurprisedOneTagged" value="0" />
@@ -91,7 +107,10 @@
         <input type="checkbox" name="SurprisedFourTagged" value="1" />
         <?php echo '<img src="'.$img4.'" height=120px width=160px>'?>
     </label>
+<<<<<<< HEAD
     <br>
+=======
+>>>>>>> origin/master
     <label class="checkbox-label">
         <input type="hidden" name="SurprisedFiveTagged" value="0" />
         <input type="checkbox" name="SurprisedFiveTagged" value="1" />
@@ -112,8 +131,11 @@
         <input type="checkbox" name="SurprisedEightTagged" value="1" />
         <?php echo '<img src="'.$img8.'" height=120px width=160px>'?>
     </label>
+<<<<<<< HEAD
     <br>
     <br>
+=======
+>>>>>>> origin/master
     <input type="submit" name="Submit" value="Submit">
 </form>
 </body>

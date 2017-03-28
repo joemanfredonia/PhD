@@ -2,11 +2,16 @@
     // starting the session
     session_start();
 
+<<<<<<< HEAD
     // analytics tracking
     include_once("analyticstracking.php");
 
     // connect to the database
     $db = mysqli_connect("db0.stevens.edu","w3_visdec","J9r1CbDR","w3_visdec"); 
+=======
+    // connect to the database
+    $db = mysqli_connect("127.0.0.1","rogueone","Pehseses1","faces"); 
+>>>>>>> origin/master
 
     if (mysqli_connect_errno()) {
     echo printf("Connect failed: %s\n", mysqli_connect_error());
@@ -42,17 +47,23 @@
     $_SESSION['HappySeven'] = $img7;
     $_SESSION['HappyEight'] = $img8;
 
+<<<<<<< HEAD
     $t = microtime(true);
     $micro = sprintf("%06d",($t - floor($t)) * 1000000);
     $d = new DateTime( date('Y-m-d H:i:s.'.$micro, $t) );
 
+=======
+>>>>>>> origin/master
     if (isset($_POST['Submit'])) { 
     $_SESSION['FeelHappy'] = $_POST['radioHappy'];
     $_SESSION['FeelSad'] = $_POST['radioSad'];
     $_SESSION['FeelAngry'] = $_POST['radioAngry'];
     $_SESSION['FeelScared'] = $_POST['radioScared'];
     $_SESSION['FeelSurprised'] = $_POST['radioSurprised'];
+<<<<<<< HEAD
     $_SESSION['tsSubmitMoodBefore'] = $d->format("Y-m-d H:i:s.u");
+=======
+>>>>>>> origin/master
     } 
 ?> 
 
@@ -64,9 +75,13 @@
 <link rel="stylesheet" href="style.css">
 </head>
 <body>
+<<<<<<< HEAD
 <br>
 <h1>Which of these faces look 'Happy'?</h1>
 <br>
+=======
+	<h1>Which of these faces look 'Happy'?</h1>
+>>>>>>> origin/master
 <form action="4.php" method="post">
     <label class="checkbox-label">
         <input type="hidden" name="HappyOneTagged" value="0" />
@@ -88,7 +103,10 @@
         <input type="checkbox" name="HappyFourTagged" value="1" />
         <?php echo '<img src="'.$img4.'" height=120px width=160px>'?>
     </label>
+<<<<<<< HEAD
     <br>
+=======
+>>>>>>> origin/master
     <label class="checkbox-label">
         <input type="hidden" name="HappyFiveTagged" value="0" />
         <input type="checkbox" name="HappyFiveTagged" value="1" />
@@ -109,8 +127,11 @@
         <input type="checkbox" name="HappyEightTagged" value="1" />
         <?php echo '<img src="'.$img8.'" height=120px width=160px>'?>
     </label>
+<<<<<<< HEAD
     <br>
     <br>
+=======
+>>>>>>> origin/master
     <input type="submit" name="Submit" value="Submit">
 </form>
 </body>

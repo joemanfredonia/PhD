@@ -8,6 +8,7 @@ label.checkbox-label > input + img{ /* IMAGE STYLES */
 }
 label.checkbox-label > input:checked + img{ /* (BOX CHECKED) IMAGE STYLES */
   border:5px solid #f00;
+<<<<<<< HEAD
 }
 body, h1,h2,h3,h4,h5,h6 {font-family: "Montserrat", sans-serif; text-align:center;}
 .w3-row-padding img {margin-bottom: 12px}
@@ -51,3 +52,6 @@ footer {
   font-family: "Cantarell";
   font-size: 14px;
 }
+=======
+}
+>>>>>>> origin/master

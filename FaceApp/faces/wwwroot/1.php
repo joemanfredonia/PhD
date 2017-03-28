@@ -1,6 +1,7 @@
 <?php
  	// starting the session
  	session_start();
+<<<<<<< HEAD
 
     // analytics tracking
     include_once("analyticstracking.php");
@@ -12,6 +13,8 @@
     if (isset($_POST['Submit'])) { 
     $_SESSION["tsBegin"] = $d->format("Y-m-d H:i:s.u");
     } 
+=======
+>>>>>>> origin/master
 ?>
 
 <!DOCTYPE html>
@@ -19,6 +22,7 @@
 <head>
 <meta charset="UTF-8">
 <title>FACES</title>
+<<<<<<< HEAD
 <link rel="stylesheet" href="style.css">
 </head>
 <body>
@@ -63,5 +67,24 @@
         <br>
         <input type="submit" name="Submit" value="Submit">
     </form>
+=======
+</head>
+<body>
+	<h1>Welcome! Tell us a little about yourself.</h1>
+<form action="2.php" method="post">
+    <p>
+        <label for="Age">Age:</label>
+        <input type="number" name="age" id="Age">
+    </p>
+    <p>
+        <label for="Gender">Gender:</label>
+        <select name="gender" id="Gender">
+        	<option value="Male">Male</option>
+        	<option value="Female">Female</option>
+        </select>
+    </p>
+    <input type="submit" name="Submit" value="Submit">
+</form>
+>>>>>>> origin/master
 </body>
 </html>

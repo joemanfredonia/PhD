@@ -2,16 +2,22 @@
     // starting the session
     session_start();
 
+<<<<<<< HEAD
     // analytics tracking
     include_once("analyticstracking.php");
 
     // connect to the database
     $db = mysqli_connect("db0.stevens.edu","w3_visdec","J9r1CbDR","w3_visdec"); 
+=======
+    // connect to the database
+    $db = mysqli_connect("127.0.0.1","rogueone","Pehseses1","faces"); 
+>>>>>>> origin/master
 
     if (mysqli_connect_errno()) {
     echo printf("Connect failed: %s\n", mysqli_connect_error());
     exit();
 }
+<<<<<<< HEAD
     $sql = "SELECT Path FROM ck_tag_data ORDER BY RAND() LIMIT 8";
     $result = mysqli_query($db, $sql);
 
@@ -45,6 +51,8 @@
     $t = microtime(true);
     $micro = sprintf("%06d",($t - floor($t)) * 1000000);
     $d = new DateTime( date('Y-m-d H:i:s.'.$micro, $t) );
+=======
+>>>>>>> origin/master
 
     if (isset($_POST['Submit'])) { 
     $_SESSION['SurprisedOneTagged'] = $_POST['SurprisedOneTagged'];
@@ -55,7 +63,10 @@
     $_SESSION['SurprisedSixTagged'] = $_POST['SurprisedSixTagged'];
     $_SESSION['SurprisedSevenTagged'] = $_POST['SurprisedSevenTagged'];
     $_SESSION['SurprisedEightTagged'] = $_POST['SurprisedEightTagged'];
+<<<<<<< HEAD
     $_SESSION['tsSubmitSurprised'] = $d->format("Y-m-d H:i:s.u");
+=======
+>>>>>>> origin/master
     } 
 ?> 
 
@@ -66,6 +77,7 @@
 <title>FACES</title>
 <link rel="stylesheet" href="style.css">
 </head>
+<<<<<<< HEAD
 <br>
 <body>
 <h1>Which of these faces do NOT look 'Happy'?</h1>
@@ -114,6 +126,111 @@
     </label>
     <br>
     <br>
+=======
+<body>
+    <h1>How do you feel now?</h1>
+<form action="9.php" method="post">
+    <p>
+        <strong>Happy?</strong>
+        <br>
+        <label class="radio-inline">
+            Not Happy at All:
+            <input type="radio" name="radioHappyAfter" value="1">1
+        </label>
+        <label class="radio-inline">
+            <input type="radio" name="radioHappyAfter" value="2">2
+        </label>
+        <label class="radio-inline">
+            <input type="radio" name="radioHappyAfter" value="3">3
+        </label>
+        <label class="radio-inline">
+            <input type="radio" name="radioHappyAfter" value="4">4
+        </label>
+        <label class="radio-inline">
+            <input type="radio" name="radioHappyAfter" value="5">5: Extremely Happy
+        </label>
+    </p>
+    <p>
+        <strong>Sad?</strong>
+        <br>
+        <label class="radio-inline">
+            Not Sad at All:
+            <input type="radio" name="radioSadAfter" value="1">1
+        </label>
+        <label class="radio-inline">
+            <input type="radio" name="radioSadAfter" value="2">2
+        </label>
+        <label class="radio-inline">
+            <input type="radio" name="radioSadAfter" value="3">3
+        </label>
+        <label class="radio-inline">
+            <input type="radio" name="radioSadAfter" value="4">4
+        </label>
+        <label class="radio-inline">
+            <input type="radio" name="radioSadAfter" value="5">5: Extremely Sad
+        </label>
+    </p>
+    <p>
+        <strong>Angry?</strong>
+        <br>
+        <label class="radio-inline">
+            Not Angry at All:
+            <input type="radio" name="radioAngryAfter" value="1">1
+        </label>
+        <label class="radio-inline">
+            <input type="radio" name="radioAngryAfter" value="2">2
+        </label>
+        <label class="radio-inline">
+            <input type="radio" name="radioAngryAfter" value="3">3
+        </label>
+        <label class="radio-inline">
+            <input type="radio" name="radioAngryAfter" value="4">4
+        </label>
+        <label class="radio-inline">
+            <input type="radio" name="radioAngryAfter" value="5">5: Extremely Angry
+        </label>
+    </p>
+    <p>
+        <strong>Afraid?</strong>
+        <br>
+        <label class="radio-inline">
+            Not Scared at All:
+            <input type="radio" name="radioScaredAfter" value="1">1
+        </label>
+        <label class="radio-inline">
+            <input type="radio" name="radioScaredAfter" value="2">2
+        </label>
+        <label class="radio-inline">
+            <input type="radio" name="radioScaredAfter" value="3">3
+        </label>
+        <label class="radio-inline">
+            <input type="radio" name="radioScaredAfter" value="4">4
+        </label>
+        <label class="radio-inline">
+            <input type="radio" name="radioScaredAfter" value="5">5: Extremely Scared
+        </label>
+    </p>
+    <p>
+        <strong>Surprised?</strong>
+        <br>
+        <label class="radio-inline">
+            Not Surprised at All:
+            <input type="radio" name="radioSurprisedAfter" value="1">1
+        </label>
+        <label class="radio-inline">
+            <input type="radio" name="radioSurprisedAfter" value="2">2
+        </label>
+        <label class="radio-inline">
+            <input type="radio" name="radioSurprisedAfter" value="3">3
+        </label>
+        <label class="radio-inline">
+            <input type="radio" name="radioSurprisedAfter" value="4">4
+        </label>
+        <label class="radio-inline">
+            <input type="radio" name="radioSurprisedAfter" value="5">5: Extremely Surprised
+        </label>
+    </p>
+>>>>>>> origin/master
     <input type="submit" name="Submit" value="Submit">
 </form>
 </body>
