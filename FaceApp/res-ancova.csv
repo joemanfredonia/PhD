@@ -1,0 +1,9 @@
+,feature,pvalue.agegrp,pvalue.gender,pvalue.speaker,pvalue.sad,pvalue.angry
+1,PctHappyCorrect,0.236,0.173,0.690,0.353,0.000
+2,PctSadCorrect,0.000,0.306,0.914,0.621,0.028
+3,PctAngryCorrect,0.263,0.899,0.949,0.507,0.683
+4,PctAfraidCorrect,0.194,0.476,0.275,0.012,0.580
+5,PctSurprisedCorrect,0.791,0.782,0.681,0.000,0.064
+6,PctNotHappyCorrect,0.142,0.072,0.674,0.001,0.034
+7,PctNotSadCorrect,0.223,0.019,0.969,0.077,0.045
+8,TotalPctCorrect,0.015,0.339,0.605,0.001,0.016
